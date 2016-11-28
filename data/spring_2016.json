@@ -1,0 +1,42 @@
+[
+  {
+    "title":"Editors' Note",
+    "author":"Madeleine Waters and Isabelle Blank",
+    "mdPath": "/data/editions/16s/editors_note.md"
+  },
+  {
+    "title":"Really Hard Stuff",
+    "author":"MJ",
+    "mdPath":"/data/editions/16s/really_hard_stuff.md"
+  },
+  {
+    "title":"Double Yellow Line",
+    "author":"Lily Anderson",
+    "mdPath":"data/editions/16s/double_yellow_line.md"
+  },
+  {
+    "title":"Limerick",
+    "author":"Tommy Hart",
+    "mdPath":"data/editions/16s/limerick.md"
+  },
+  {
+    "title":"Falling Game",
+    "author":"Robbie Herbst",
+    "mdPath":"data/editions/16s/falling_game.md"
+  },
+  {
+    "title":"The Failed Dragon",
+    "author":"Madeline Waters",
+    "mdPath":"data/editions/16s/the_failed_dragon.md"
+  },
+  {
+    "title":"All the Data that Ever Existed",
+    "author":"Logan Collins",
+    "mdPath":"data/editions/16s/all_the_data_that_ever_existed.md"
+  },
+  {
+    "title":"Kassandros Elchin the Antique Dealer",
+    "author":"Robbie Herbst and Madeline Waters",
+    "mdPath":"data/editions/16s/kassandros_elchin_the_antique_dealer.md"
+  }
+]
