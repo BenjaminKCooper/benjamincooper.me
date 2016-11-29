@@ -1,0 +1,100 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/app-route/app-route.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="my-shop-category-data.html">
+<!-- <link rel="import" href="my-shop-select.html"> -->
+
+<dom-module id="my-shop-detail">
+  <template>
+          <!-- app-route provides the name of the category and the item. -->
+    <app-route
+        route="[[route]]"
+        pattern="/:category/:item"
+        data="{{routeData}}"></app-route>
+      <!-- my-shop-category-data provides the item data for a given category and item name. -->
+    <my-shop-category-data
+        id="categoryData"
+        category-name="[[routeData.category]]"
+        item-name="[[routeData.item]]"
+        item="{{item}}"
+        failure="{{failure}}"></my-shop-category-data>
+
+    <div>
+      <!-- <my-shop-image alt="[[item.title]]" src="[[item.largeImage]]"></my-shop-image> -->
+      <div class="detail" has-content$="[[_isDefined(item)]]">
+        <h1>[[item.title]]</h1>
+        <div class="price">[[item.price]]</div>
+
+        <div class="description">
+          <h2>Description</h2>
+          <p id="desc"></p>
+          <p>[[item.description]]</p>
+        </div>
+          <button on-tap="_addToCart" aria-label="Add this item to cart">Add to Cart</button>
+      </div>
+    </div>
+
+  </template>
+
+  <script>
+
+    Polymer({
+
+      is: 'my-shop-detail',
+
+      properties: {
+
+        item: Object,
+
+        route: Object,
+
+        routeData: Object,
+
+        visible: Boolean,
+
+        offline: {
+          type: Boolean,
+          observer: '_offlineChanged'
+        },
+
+        failure: Boolean
+
+      },
+
+      observers: [
+        '_itemChanged(item, visible)'
+      ],
+
+      _itemChanged: function(item, visible) {
+        if (visible) {
+          this.debounce('item-change', function() {
+            // The item description contains escaped HTML (e.g. "&lt;br&gt;"), so we need to
+            // unescape it ("<br>") and set it as innerHTML.
+            var text = item ? item.description : '';
+            this.$.desc.innerHTML = text;//this._unescapeText(text);
+
+            this.fire('change-section', {
+              category: item.category,
+              title: item.title
+            });
+          });
+        }
+      },
+      _isDefined: function(item) {
+       return item != null;
+     }
+    });
+
+  </script>
+
+</dom-module>

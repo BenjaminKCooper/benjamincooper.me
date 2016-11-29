@@ -9,8 +9,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../bower_components/polymer/polymer.html">
-<link rel="import" href="shop-button.html">
-<link rel="import" href="shop-image.html">
+
 
 <dom-module id="shop-home">
 
@@ -19,9 +18,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <template is="dom-repeat" items="[[categories]]" strip-whitespace>
       <div class="item">
         <h2>[[item.title]]</h2>
-        <shop-button>
           <a aria-label$="[[item.title]] Shop Now" href$="/list/[[item.name]]">Shop Now</a>
-        </shop-button>
       </div>
     </template>
 
