@@ -22,11 +22,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
 <!-- <link rel="import" href="my-icons.html"> -->
 
-<link rel="import" href="my-shop-category-data.html">
-<link rel="import" href="my-shop-home.html">
-<link rel="import" href="my-shop-list-item.html">
-<link rel="import" href="my-shop-list.html">
-<link rel="import" href="my-shop-detail.html">
+<link rel="import" href="my-category-data.html">
+<link rel="import" href="my-list-item.html">
+<link rel="import" href="my-list.html">
+<link rel="import" href="my-detail.html">
 
 <dom-module id="my-app">
   <template>
@@ -90,7 +89,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         data="{{routeData}}"
         tail="{{subroute}}"></app-route>
 
-    <my-shop-category-data categories="{{categories}}"></my-shop-category-data>
+    <my-category-data categories="{{categories}}"></my-category-data>
     <app-drawer-layout fullbleed>
 
       <app-header-layout has-scrolling-region>
@@ -118,11 +117,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <my-abouthumbug name="abouthumbug"></my-abouthumbug>
           <my-view404 name="view404"></my-view404>
 
-          <!-- <my-shop-home name="home" categories="[[categories]]"></my-shop-home> -->
           <!-- list view of items in a category -->
-          <my-shop-list name="list" route="[[subroute]]" offline="[[offline]]"></my-shop-list>
+          <my-list name="list" route="[[subroute]]" offline="[[offline]]"></my-list>
           <!-- detail view of one item -->
-          <my-shop-detail name="detail" route="[[subroute]]" offline="[[offline]]"></my-shop-detail>
+          <my-detail name="detail" route="[[subroute]]" offline="[[offline]]"></my-detail>
 
         </iron-pages>
       </app-header-layout>
@@ -192,7 +190,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         this.categoryName = detail.category || '';
         // Announce the page's title
         if (detail.title) {
-          document.title = detail.title + ' - my-shop';
+          document.title = detail.title + ' - my';
           this._announce(detail.title + ', loaded');
         }
       }

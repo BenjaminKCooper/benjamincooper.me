@@ -1,42 +1,58 @@
 [
   {
     "title":"Editors' Note",
+    "path_title":"editors_note",
     "author":"Madeleine Waters and Isabelle Blank",
-    "mdPath": "/data/editions/spring_2016/editors_note.md"
+    "mdPath": "/data/editions/spring_2016/editors_note.md",
+    "edition":"spring_2016"
   },
   {
     "title":"Really Hard Stuff",
+    "path_title":"really_hard_stuff",
     "author":"MJ",
-    "mdPath":"/data/editions/spring_2016/really_hard_stuff.md"
+    "mdPath":"/data/editions/spring_2016/really_hard_stuff.md",
+    "edition":"spring_2016"
   },
   {
     "title":"Double Yellow Line",
+    "path_title":"double_yellow_line",
     "author":"Lily Anderson",
-    "mdPath":"data/editions/spring_2016/double_yellow_line.md"
+    "mdPath":"data/editions/spring_2016/double_yellow_line.md",
+    "edition":"spring_2016"
   },
   {
     "title":"Limerick",
+    "path_title":"limerick",
     "author":"Tommy Hart",
-    "mdPath":"data/editions/spring_2016/limerick.md"
+    "mdPath":"data/editions/spring_2016/limerick.md",
+    "edition":"spring_2016"
   },
   {
     "title":"Falling Game",
+    "path_title":"falling_game",
     "author":"Robbie Herbst",
-    "mdPath":"data/editions/spring_2016/falling_game.md"
+    "mdPath":"data/editions/spring_2016/falling_game.md",
+    "edition":"spring_2016"
   },
   {
     "title":"The Failed Dragon",
+    "path_title":"the_failed_dragon",
     "author":"Madeline Waters",
-    "mdPath":"data/editions/spring_2016/the_failed_dragon.md"
+    "mdPath":"data/editions/spring_2016/the_failed_dragon.md",
+    "edition":"spring_2016"
   },
   {
     "title":"All the Data that Ever Existed",
+    "path_title":"all_the_data_that_ever_existed",
     "author":"Logan Collins",
-    "mdPath":"data/editions/spring_2016/all_the_data_that_ever_existed.md"
+    "mdPath":"data/editions/spring_2016/all_the_data_that_ever_existed.md",
+    "edition":"spring_2016"
   },
   {
     "title":"Kassandros Elchin the Antique Dealer",
+    "path_title":"kassandros_elchin_the_antique_dealer",
     "author":"Robbie Herbst and Madeline Waters",
-    "mdPath":"data/editions/spring_2016/kassandros_elchin_the_antique_dealer.md"
+    "mdPath":"data/editions/spring_2016/kassandros_elchin_the_antique_dealer.md",
+    "edition":"spring_2016"
   }
 ]

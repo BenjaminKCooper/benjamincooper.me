@@ -1,22 +1,16 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
-
+<link rel="import" href="shop-image.html">
 
 <dom-module id="my-chapbook-editions">
   <!-- Defines the element's style and local DOM -->
   <template>
     <template is="dom-repeat" items="[[categories]]">
       <div class="item">
-        <h2>[[item.title]]</h2>
-        <a aria-label$="[[item.title]] Shop Now" href="list/[[item.name]]">Shop Now</a>
+        <a text="[[item.edition]]" href="list/[[item.path_name]]"></a>
+         <!-- <img src="[[item.image]]"></img> -->
       </div>
     </template>
   </template>
-
-
-
-
-
-
 
   </template>
   <!-- Creates the element's prototype and registers it -->

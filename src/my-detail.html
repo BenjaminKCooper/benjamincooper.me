@@ -11,10 +11,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/app-route/app-route.html">
 <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
-<link rel="import" href="my-shop-category-data.html">
+<link rel="import" href="my-category-data.html">
 <!-- <link rel="import" href="my-shop-select.html"> -->
 
-<dom-module id="my-shop-detail">
+<dom-module id="my-detail">
   <template>
           <!-- app-route provides the name of the category and the item. -->
     <app-route
@@ -22,25 +22,23 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         pattern="/:category/:item"
         data="{{routeData}}"></app-route>
       <!-- my-shop-category-data provides the item data for a given category and item name. -->
-    <my-shop-category-data
+
+    <my-category-data
         id="categoryData"
         category-name="[[routeData.category]]"
         item-name="[[routeData.item]]"
         item="{{item}}"
-        failure="{{failure}}"></my-shop-category-data>
+        failure="{{failure}}"></my-category-data>
 
     <div>
       <!-- <my-shop-image alt="[[item.title]]" src="[[item.largeImage]]"></my-shop-image> -->
       <div class="detail" has-content$="[[_isDefined(item)]]">
         <h1>[[item.title]]</h1>
-        <div class="price">[[item.price]]</div>
 
         <div class="description">
           <h2>Description</h2>
-          <p id="desc"></p>
-          <p>[[item.description]]</p>
+          <div>[[item.mdPath]]</div>
         </div>
-          <button on-tap="_addToCart" aria-label="Add this item to cart">Add to Cart</button>
       </div>
     </div>
 
@@ -50,7 +48,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     Polymer({
 
-      is: 'my-shop-detail',
+      is: 'my-detail',
 
       properties: {
 
@@ -76,6 +74,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       ],
 
       _itemChanged: function(item, visible) {
+        console.log("somthing")
         if (visible) {
           this.debounce('item-change', function() {
             // The item description contains escaped HTML (e.g. "&lt;br&gt;"), so we need to
@@ -91,6 +90,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }
       },
       _isDefined: function(item) {
+        console.log('blahhh')
        return item != null;
      }
     });
