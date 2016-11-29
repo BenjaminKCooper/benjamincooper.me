@@ -1,42 +1,47 @@
 [
   {
     "title":"Editors' Note",
-    "author":"Madeleine Waters and Isabelle Blank",
-    "mdPath": "/data/editions/spring_2016/editors_note.md"
+    "author":"Lacey Jones",
+    "mdPath": "/data/editions/winter_2016/editors_note.md"
   },
   {
-    "title":"Really Hard Stuff",
-    "author":"MJ",
-    "mdPath":"/data/editions/spring_2016/really_hard_stuff.md"
+    "title":"A Group of Americans Walk Through the Bush",
+    "author":"Molly Ryan",
+    "mdPath":"data/editions/winter_2016/a_group_of_americans_walk.md"
   },
   {
-    "title":"Double Yellow Line",
-    "author":"Lily Anderson",
-    "mdPath":"data/editions/spring_2016/double_yellow_line.md"
-  },
-  {
-    "title":"Limerick",
-    "author":"Tommy Hart",
-    "mdPath":"data/editions/spring_2016/limerick.md"
-  },
-  {
-    "title":"Falling Game",
-    "author":"Robbie Herbst",
-    "mdPath":"data/editions/spring_2016/falling_game.md"
-  },
-  {
-    "title":"The Failed Dragon",
-    "author":"Madeline Waters",
-    "mdPath":"data/editions/spring_2016/the_failed_dragon.md"
-  },
-  {
-    "title":"All the Data that Ever Existed",
+    "title":"The Tall Folk",
     "author":"Logan Collins",
-    "mdPath":"data/editions/spring_2016/all_the_data_that_ever_existed.md"
+    "mdPath":"data/editions/winter_2016/the_tall_folk.md"
   },
   {
-    "title":"Kassandros Elchin the Antique Dealer",
-    "author":"Robbie Herbst and Madeline Waters",
-    "mdPath":"data/editions/spring_2016/kassandros_elchin_the_antique_dealer.md"
+    "title":"God",
+    "author":"Chrissy Long",
+    "mdPath":"data/editions/winter_2016/god.md"
+  },
+  {
+    "title":"The Beautiful Country",
+    "author":"Laura Sim",
+    "mdPath":"data/editions/winter_2016/the_beautiful_country.md"
+  },
+  {
+    "title":"Thumbs Do Not Have Magic Powers",
+    "author":"Grant Schutzman",
+    "mdPath":"data/editions/winter_2016/thumbs_do_not_have_magical_powers.md"
+  },
+  {
+    "title":"The Sunday Morning Club",
+    "author":"Robbie Herbst",
+    "mdPath":"data/editions/winter_2016/the_sunday_morning_club.md"
+  },
+  {
+    "title":"The Northern Mecca",
+    "author":"Isabelle Blank",
+    "mdPath":"data/editions/winter_2016/the_northern_mecca.md"
+  },
+  {
+    "title":"On Cover Letters",
+    "author":"MJ",
+    "mdPath":"data/editions/winter_2016/on_cover_letters.md"
   }
 ]
