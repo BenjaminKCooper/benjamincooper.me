@@ -1,5 +1,5 @@
 {
-  "name": "polymer-starter-kit",
+  "name": "Humbug-Chapbook",
   "authors": [
     "The Polymer Authors"
   ],
@@ -17,7 +17,10 @@
     "paper-icon-button": "PolymerElements/paper-icon-button#~1.1.0",
     "polymer": "Polymer/polymer#^1.6.0",
     "paper-tabs": "PolymerElements/paper-tabs#^1.7.0",
-    "marked-element": "PolymerElements/marked-element#^1.2.0"
+    "marked-element": "PolymerElements/marked-element#^1.2.0",
+    "zero-md": "zerodevx/zero-md#^0.2.0",
+    "webcomponentsjs": "^0.7.23",
+    "markdown-it-mark": "^2.0.0"
   },
   "devDependencies": {
     "web-component-tester": "^4.0.0"

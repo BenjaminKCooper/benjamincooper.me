@@ -19,6 +19,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/app-route/app-route.html">
 <link rel="import" href="../bower_components/iron-pages/iron-pages.html">
 <link rel="import" href="../bower_components/iron-selector/iron-selector.html">
+<link rel="import" href="../bower_components/paper-tabs/paper-tabs.html">
 <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
 <!-- <link rel="import" href="my-icons.html"> -->
 
@@ -35,6 +36,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         --app-secondary-color: black;
 
         display: flex;
+      }
+
+      a {
+        color: inherit;
+        text-align: center;
+        text-decoration: none;
       }
 
       app-header {
@@ -55,6 +62,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       #mainTitle {
         display: flex;
         justify-content: center;
+        margin: 1%;
       }
 
       .drawer-list {
@@ -95,7 +103,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <app-header-layout has-scrolling-region>
 
 
-        <app-header id="header" effects="waterfall" fixed condenses>
+        <!-- <app-header id="header" effects="waterfall" fixed condenses>
           <app-toolbar id="mainTitle">
             <img height="90%" src="../images/HumbugLogo.png">
           </app-toolbar>
@@ -104,7 +112,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <a name="abouthumbug" href="/abouthumbug">About Humbug</a>
             <a name="contact-us" href="/contact-us">Contact Us</a>
           </iron-selector>
-        </app-header>
+        </app-header> -->
+
+        <app-header fixed condenses effects="waterfall">
+    <app-toolbar id="mainTitle">
+      <img height="90%" src="../images/HumbugLogo.png"/>
+    </app-toolbar>
+
+    <paper-tabs selected="0" sticky>
+      <paper-tab link>
+        <a name="chapbook-editions" href="/chapbook-editions">Chapbook Editions</a>
+      </paper-tab>
+      <paper-tab link>
+        <a name="abouthumbug" href="/abouthumbug">About Humbug</a>
+      </paper-tab>
+      <paper-tab link>
+        <a name="contact-us" href="/contact-us">Contact Us</a>
+      </paper-tab>
+    </paper-tabs>
+  </app-header>
 
 
         <iron-pages

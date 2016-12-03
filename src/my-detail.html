@@ -9,14 +9,50 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/marked-element/marked-element.html">
 <link rel="import" href="../bower_components/app-route/app-route.html">
+
 <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="my-category-data.html">
+<link rel="import" href="../bower_components/zero-md/zero-md.html">
+
 <!-- <link rel="import" href="my-shop-select.html"> -->
+<!-- <link rel="import" href="../bower_components/marked"> -->
 
 <dom-module id="my-detail">
   <template>
           <!-- app-route provides the name of the category and the item. -->
+
+    <style>
+      .detail{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .article{
+        justify-content: center;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 5%;
+
+      }
+      img{
+        height: 30%;
+        width: 30%;
+      }
+
+      #title{
+        font-size: 40pt;
+        font-weight: bolder;
+      }
+
+      #authors{
+        font-size: 20pt;
+        font-weight: bold;
+      }
+
+    </style>
     <app-route
         route="[[route]]"
         pattern="/:category/:item"
@@ -33,12 +69,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <div>
       <!-- <my-shop-image alt="[[item.title]]" src="[[item.largeImage]]"></my-shop-image> -->
       <div class="detail" has-content$="[[_isDefined(item)]]">
-        <h1>[[item.title]]</h1>
+        <div id="title">[[item.title]]</div>
+        <div id="authors">- [[item.author]]</div>
+        <div class="article">
+          <zero-md file="[[item.mdPath]]">
+            <!-- Remember to pass in empty container of class="md-html". -->
+            <div class="md-html"></div>
+          </zero-md>
 
-        <div class="description">
-          <h2>Description</h2>
-          <div>[[item.mdPath]]</div>
         </div>
+
       </div>
     </div>
 

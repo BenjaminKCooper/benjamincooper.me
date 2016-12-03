@@ -17,6 +17,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <dom-module id="my-list">
 
   <template>
+    <style>
+    .articles-list{
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+
+    }
+
+    #articles-list{
+      
+    }
+
+    </style>
 
 
 
@@ -39,10 +52,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <h1>[[category.title]]</h1>
     </header>
 
-    <ul class="grid" hidden$="[[failure]]">
+    <ul class="articles-list" hidden$="[[failure]]">
       <template is="dom-repeat" items="[[_getListItems(category.items)]]" initial-count="4">
         <li>
-          <a href$="[[_getItemHref(item)]]"><my-list-item item="[[item]]"></my-list-item></a>
+          <a id="article-link" href$="[[_getItemHref(item)]]"><my-list-item item="[[item]]"></my-list-item></a>
         </li>
       </template>
     </ul>

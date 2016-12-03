@@ -1,1 +1,1 @@
-<p>Tommy Hart</p><p><strong>Limerick </strong></p><p>Warmer weather is the pits –</p><p>Or at least the smell of it.</p><p>For with more sun,</p><p>comes less fun,</p><p>As I sweat odors explicit</p>
+<p>Warmer weather is the pits –</p><p>Or at least the smell of it.</p><p>For with more sun,</p><p>comes less fun,</p><p>As I sweat odors explicit</p>
