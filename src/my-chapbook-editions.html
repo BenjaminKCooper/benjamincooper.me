@@ -1,13 +1,27 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="shop-image.html">
+<script src="../bower_components/pdfobject/pdfobject.js"></script>
 
 <dom-module id="my-chapbook-editions">
   <!-- Defines the element's style and local DOM -->
   <template>
+    <style>
+      #pdf-view {
+        height: 4%;
+      }
+
+      .pdfobject-container { height: 500px;}
+      .pdfobject { border: 1px solid #666; }
+
+    </style>
     <template is="dom-repeat" items="[[categories]]">
       <div class="item">
         <a text="[[item.edition]]" href="list/[[item.path_name]]"></a>
-         <!-- <img src="[[item.image]]"></img> -->
+        <script>PDFObject.embed("/pdf/sample-3pp.pdf", "#example1");</script>
+        <div id="example1"></div>
+
+
+
       </div>
     </template>
   </template>
@@ -21,6 +35,12 @@
         categories: {
           type:Array
         }
+      },
+      _fetchPDF: function(the_item) {
+        let pdfName = String(the_item.pdf);
+        let theString = "../data/pdfs/"+pdfName+".pdf";
+        console.log(theString);
+        return theString;
       }
     });
   </script>

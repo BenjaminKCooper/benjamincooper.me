@@ -20,7 +20,9 @@
     "marked-element": "PolymerElements/marked-element#^1.2.0",
     "zero-md": "zerodevx/zero-md#^0.2.0",
     "webcomponentsjs": "^0.7.23",
-    "markdown-it-mark": "^2.0.0"
+    "markdown-it-mark": "^2.0.0",
+    "pdf-element": "^1.0.13",
+    "pdfobject": "pdfobject2#*"
   },
   "devDependencies": {
     "web-component-tester": "^4.0.0"
