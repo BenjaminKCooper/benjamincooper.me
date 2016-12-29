@@ -21,7 +21,9 @@
     "zero-md": "zerodevx/zero-md#^0.2.0",
     "webcomponentsjs": "^0.7.23",
     "markdown-it-mark": "^2.0.0",
-    "threejs": "*"
+    "threejs": "*",
+    "parallax-container": "^1.1.2",
+    "mojs": "^0.288.1"
   },
   "devDependencies": {
     "web-component-tester": "^4.0.0"
