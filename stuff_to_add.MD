@@ -21,7 +21,7 @@ Console Log (lol save for last):
 - https://github.com/IonicaBizau/image-to-ascii
 
 Design Frameworks:
-- Mo.Js (http://mojs.io/)
+- Mo.Js (http://mojs.io/) (http://codepen.io/sol0mka/pen/b8831849500f0d5cd0ab5691ebe17873)
   - Tutorial: https://css-tricks.com/introduction-mo-js/
 - https://threejs.org/
 

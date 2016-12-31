@@ -2,237 +2,205 @@
 <link rel="import" href="../bower_components/app-layout/app-scroll-effects/effects/parallax-background.html">
 <link rel="import" href="../bower_components/app-layout/demo/sample-content.html">
 <link rel="import" href="../bower_components/app-layout/app-box/app-box.html">
+<link rel="import" href="../bower_components/parallax-container/parallax-container.html">
 
 
 
 
-
-<dom-module id="my-oldhomepage">
+<dom-module id="my-homepage">
   <script src="../bower_components/threejs/build/three.js"></script>
 
   <template>
 
-  <style is="custom-style">
-    body {
-      margin: 0;
-      font-family: 'Roboto', 'Noto', sans-serif;
-      background-color: #eee;
-      scroll-behavior: smooth;
+
+  <style >
+  body {
+      font-family: Arial;
+      overflow: hidden;
+      margin: 0px;
+      padding: 0px;
     }
-    header {
-      background-color: white;
-      height: 128px;
+    parallax-container {
+      font-size: 200%;
     }
-    app-toolbar {
-      font-size: 18px;
-      font-weight: 400;
-      letter-spacing: 5px;
+    .title {
       text-align: center;
-      color: #1a237e;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
     }
-    .nav {
-      height: 64px;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      background-color: rgba(255, 255, 255, 0.8);
+    #aboutMeGroup {
+      /*background: red;*/
+      /*height: 100px; make a custome height!*/
     }
-    .nav li {
-      display: inline-block;
-      list-style: none;
+    #DALIGroup{
+      /*background: orange;*/
     }
-    .nav a {
-      display: inline-block;
-      font-weight: 12px;
-      line-height: 64px;
-      text-decoration: none;
-      color: black;
-      font-weight: 300;
-      margin: 0 10px;
+    #interestsGroup {
+      /*background: green;*/
     }
-    .nav a:hover {
-      color: #444;
-      border-bottom: 1px solid #999;
-    }
-    [threshold-triggered] {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1;
-      -webkit-backdrop-filter: saturate(180%) blur(20px);
-      backdrop-filter: saturate(180%) blur(20px);
-    }
-    .first, .second, .third, .fourth {
-      height: 640px;
-    }
-    .second {
-      --app-box-background-front-layer: {
-        background-image: url(//app-layout-assets.appspot.com/assets/bg2.jpg);
-        background-position: bottom;
-        padding-bottom: 120px;
-        margin-top: -20px;
-        height: 100%;
-      };
-    }
-    .third {
-      --app-box-background-front-layer: {
-        background-image: url(//app-layout-assets.appspot.com/assets/bg3.jpg);
-        background-position: bottom;
-        padding-bottom: 120px;
-        margin-top: -20px;
-        height: 100%;
-      };
-    }
-    .fourth {
-      --app-box-background-front-layer: {
-        background-image: url(//app-layout-assets.appspot.com/assets/bg4.jpg);
-        background-position: bottom;
-        padding-bottom: 120px;
-        margin-top: -20px;
-        height: 100%;
-      };
-    }
-    section {
-      padding-top: 100px;
-    }
-    article {
-      font-weight: 100;
-      max-width: 500px;
-      text-align: center;
-      margin: 0 auto 100px auto;
-    }
-    article h2 {
-      font-weight: 100;
-      font-size: 50px;
-      margin: 5px;
-    }
-    article p {
-      font-size: 18px;
-      line-height: 30px;
-    }
-    article hr {
-      width: 100px;
-      height: 1px;
-      border: none;
-      margin: 20px auto;
-      background-color: black;
+    #researchGroup {
+      /*background: blue;*/
     }
 
+    #experienceGroup {
+      /*background: pink;*/
+
+    }
+
+
+    #contactMeGroup {
+      /*background: purple;*/
+
+    }
+
+    #header {
+      position: sticky;
+    }
 
 
 
   </style>
-</head>
 
-  <header>
-    <app-toolbar>
-      <div main-title>POLYMER</div>
-    </app-toolbar>
-    <app-box threshold="64">
-      <ul role="navigation" class="nav">
-        <li><a href="#speed">Speed</a></li>
-        <li><a href="#modern">Modern</a></li>
-        <li><a href="#standard">Standard</a></li>
-        <li><a href="#create">Create</a></li>
-      </ul>
-    </app-box>
-  </header>
 
-  <main>
-    <section id="speed">
-      <article>
-        <hr />
-        <h2>Built for Speed</h2>
-        <p>Polymer 1.0 replaces the shadow DOM polyfill with a lightweight shim, uses a new, faster data-binding system, and significantly reduces code size.</p>
-      </article>
-      <app-box class="first" effects="parallax-background">
-        <div id="test"></div>
 
-      </app-box>
-    </section>
 
-    <section id="modern">
-      <article>
-        <hr />
-        <h2>For Modern Browsers</h2>
-        <p>Polymer is built from the ground up for modern browsers, using the latest web platform APIs. Polyfills provide support on evergreen browsers for APIs that aren't universal yet.</p>
-      </article>
 
-      <app-box class="second" effects="parallax-background"></app-box>
-    </section>
+<parallax-container >
+  <p id="header">An example of <code>&lt;parallax-container&gt;</code>:</p>
 
-    <section id="standard">
-      <article>
-        <hr />
-        <h2>Using Web Components</h2>
-        <p>Polymer leverages web components, a new set of standards designed to provide reusable components for the web.</p>
-      </article>
-      <app-box class="third" effects="parallax-background"></app-box>
-    </section>
+  <parallax-group id="aboutMeGroup">
+    <parallax-layer>
+          <div class="title">
+            Base Layer
+          </div>
+        </parallax-layer>
+        <parallax-layer layer=-2>
+          <div class="title">
+            Deep Background Layer
+          </div>
+        </parallax-layer>
+        <parallax-layer layer=-1>
+          <div class="title">
+            Background Layer
+          </div>
+        </parallax-layer>
+  </parallax-group>
 
-    <section id="create">
-      <article>
-        <hr />
-        <h2>Create your own elements</h2>
-        <p>The Polymer library makes it easy to create your own powerful elements. Give your element some markup and properties, and then use it on a site. Polymer provides useful features like templating and data binding to reduce the amount of boilerplate you need to write.</p>
-      </article>
-      <app-box class="fourth" effects="parallax-background"></app-box>
-    </section>
-  </main>
+
+  <parallax-group id="DALIGroup">
+    <parallax-layer>
+          <div class="title">
+            Base Layer
+          </div>
+        </parallax-layer>
+        <parallax-layer layer=-2>
+          <div class="title">
+            Deep Background Layer
+          </div>
+        </parallax-layer>
+        <parallax-layer layer=-1>
+          <div class="title">
+            Background Layer
+          </div>
+        </parallax-layer>
+
+  </parallax-group>
+
+
+
+  <parallax-group id="interestsGroup">
+
+    <parallax-layer>
+          <div class="title">
+            Base Layer
+          </div>
+        </parallax-layer>
+        <parallax-layer layer=-2>
+          <div class="title">
+            Deep Background Layer
+          </div>
+        </parallax-layer>
+        <parallax-layer layer=-1>
+          <div class="title">
+            Background Layer
+          </div>
+        </parallax-layer>
+
+  </parallax-group>
+
+
+  <parallax-group id="researchGroup">
+
+    <parallax-layer>
+          <div class="title">
+            Base Layer
+          </div>
+        </parallax-layer>
+        <parallax-layer layer=-2>
+          <div class="title">
+            Deep Background Layer
+          </div>
+        </parallax-layer>
+        <parallax-layer layer=-1>
+          <div class="title">
+            Background Layer
+          </div>
+        </parallax-layer>
+
+  </parallax-group>
+
+
+  <parallax-group id="experienceGroup">
+
+    <parallax-layer>
+          <div class="title">
+            Base Layer
+          </div>
+        </parallax-layer>
+        <parallax-layer  layer=-2>
+          <div class="title">
+            Deep Background Layer
+          </div>
+        </parallax-layer>
+        <parallax-layer layer=-1>
+          <div class="title">
+            Background Layer
+          </div>
+        </parallax-layer>
+
+  </parallax-group>
+
+  <parallax-group id="contactMeGroup">
+
+    <parallax-layer>
+          <div class="title">
+            Base Layer
+          </div>
+        </parallax-layer>
+        <parallax-layer layer=-2>
+          <div class="title">
+            Deep Background Layer
+          </div>
+        </parallax-layer>
+        <parallax-layer layer=-1>
+          <div class="title">
+            Background Layer
+          </div>
+        </parallax-layer>
+
+  </parallax-group>
+
+</parallax-container>
 
 
 
 
   </template>
 
-  <script>
-    Polymer({
-      is: 'my-oldhomepage',
-      created: function(callback){console.log(callback)},
-      ready: function(){
+  <script src="js_stuff/homepage.js"></script>
 
-
-        var container = Polymer.dom(this.root).querySelector('#test');
-        console.log(container);
-
-        window.addEventListener( 'resize', onWindowResize, false );
-
-
-        var scene = new THREE.Scene();
-        var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
-
-        var renderer = new THREE.WebGLRenderer();
-        renderer.setSize( window.innerWidth, window.innerHeight );
-        container.appendChild( renderer.domElement );
-
-        var geometry = new THREE.BoxGeometry( 1, 1, 1 );
-        var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-        var cube = new THREE.Mesh( geometry, material );
-        cube.position.y = 2.2 ;
-        scene.add( cube );
-
-        camera.position.z = 5;
-
-        var render = function () {
-        requestAnimationFrame( render );
-
-        cube.rotation.x += 0.1;
-        cube.rotation.y += 0.1;
-
-        renderer.render(scene, camera);
-        };
-
-        function onWindowResize() {
-  				camera.aspect = window.innerWidth / window.innerHeight;
-  				camera.updateProjectionMatrix();
-  				renderer.setSize( window.innerWidth, window.innerHeight );
-			}
-
-        render();
-
-      }
-    });
-  </script>
 
 </dom-module>

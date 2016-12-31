@@ -23,7 +23,8 @@
     "markdown-it-mark": "^2.0.0",
     "threejs": "*",
     "parallax-container": "^1.1.2",
-    "mojs": "^0.288.1"
+    "mojs": "^0.288.1",
+    "scrollreveal": "^3.3.2"
   },
   "devDependencies": {
     "web-component-tester": "^4.0.0"
